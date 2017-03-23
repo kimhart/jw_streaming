@@ -4,6 +4,13 @@ body, html {
   background-color: #000;
   font-family: 'Roboto', 'Arial', sans-serif;
   color: #ECECEC;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.page-wrap {
+  width: 100%;
 }
 
 h1 {
@@ -18,3 +25,75 @@ h1 {
   font-weight: 700;
   color: red;
 }
+
+.main-content-wrap {
+  margin-bottom: 60px;
+}
+
+.hero {
+  height: 40vh;
+}
+
+.category {
+  display: flex;
+  justify-content: flex-start;
+  height: 170px;
+  width: 100%;
+  padding-left: 5%;
+  overflow: scroll;
+  position: relative;
+}
+
+.arrow-wrap {
+  width: 100%;
+  display: flex;
+  height: 170px;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+}
+
+.left-arrow, .right-arrow {
+  opacity: .3;
+  height: 30px;
+  padding: 0 20px;
+  z-index: 99;
+}
+
+.right-arrow {
+  opacity: 1;
+}
+
+.category-title {
+  font-size: 18px;
+  margin-left: 5%;
+  margin-top: 50px;
+}
+
+.film {
+  box-sizing: border-box;
+  min-width: 20%;
+  height: 100%;
+  margin: 0 10px;
+  background: no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.title-bar {
+  box-sizing: border-box;
+  background-color: #313131;
+  font-size: 14px;
+  padding: 10px;
+  font-weight: 100;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+
+
+
