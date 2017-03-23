@@ -5,6 +5,7 @@
       <meta http-equiv="x-ua-compatible" content="ie=edge">
       <title>JW Streaming Media</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/dist/swiper.min.css">
       <link rel="stylesheet" href="css/main.css"> 
   </head>
   <body>
@@ -12,32 +13,39 @@
       <header>
         <h1>Streaming <span class="bold-headline">Media</span></h1>
       </header>
-      <section class="hero">
-        <div class="carousel-wrap">
-          <div class="carousel-content"></div>
+      <section class="carousel">
+        <div class="arrow-overlay">
+          <img class="left-arrow prev-slide" src="assets/arrow-left.svg">
+          <img class="right-arrow next-slide" src="assets/arrow-right.svg">
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper"></div>
+          <div class="swiper-pagination"></div>
         </div>
       </section>
       <div class="main-content-wrap">
         <h2 class="category-title">Documentaries</h2>
-        <div class="arrow-wrap">
+        <div class="arrow-overlay">
           <img class="left-arrow" src="assets/arrow-left.svg">
           <img class="right-arrow" src="assets/arrow-right.svg">
         </div>
         <section id="documentaries" class="category"></section>
         <h2 class="category-title">Live Events</h2>
-        <div class="arrow-wrap">
+        <div class="arrow-overlay">
           <img class="left-arrow" src="assets/arrow-left.svg">
           <img class="right-arrow" src="assets/arrow-right.svg">
         </div>
         <section id="live-events" class="category"></section>
         <h2 class="category-title">Short Films</h2>
-        <div class="arrow-wrap">
+        <div class="arrow-overlay">
           <img class="left-arrow" src="assets/arrow-left.svg">
           <img class="right-arrow" src="assets/arrow-right.svg">
         </div>
         <section id="short-films" class="category"></section>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="/dist/swiper.jquery.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@ body, html {
   margin: 0;
   padding: 0;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .page-wrap {
@@ -30,8 +31,17 @@ h1 {
   margin-bottom: 60px;
 }
 
-.hero {
-  height: 40vh;
+.swiper-container {
+  width: 100%;
+  height: 50vh;
+} 
+
+.play-button {
+  width: 50px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red;
 }
 
 .category {
@@ -39,15 +49,15 @@ h1 {
   justify-content: flex-start;
   height: 170px;
   width: 100%;
-  padding-left: 5%;
+  padding: 0 5%;
   overflow: scroll;
   position: relative;
 }
 
-.arrow-wrap {
+.arrow-overlay {
   width: 100%;
-  display: flex;
   height: 170px;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   position: absolute;
@@ -76,9 +86,18 @@ h1 {
   min-width: 20%;
   height: 100%;
   margin: 0 10px;
-  background: no-repeat center center;
-  background-size: cover;
   position: relative;
+  overflow: hidden;
+  border: 1px solid #484848;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+      -o-background-size: cover;
+        background-size: cover;
+}
+
+.film:last-child {
+  margin-right: 200px
 }
 
 .title-bar {
@@ -91,6 +110,14 @@ h1 {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.menu {
+  height: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
 }
 
 
