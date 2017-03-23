@@ -1,4 +1,3 @@
-
 const swiperWrapper = document.querySelector('.swiper-wrapper');
 const documentariesCategory = document.getElementById('documentaries');
 const liveEventsCategory = document.getElementById('live-events');
@@ -58,6 +57,7 @@ function populateCarousel(films) {
 
   for (i = 0; i < featured.length; i++) {
     const slide = document.createElement('div');
+    const slideInfo = document.createElement('div');
     const titleWrap = document.createElement('div');
     const title = document.createTextNode(featured[i].title);
     const descriptionWrap = document.createElement('div');
@@ -68,21 +68,23 @@ function populateCarousel(films) {
     titleWrap.classList.add('slide-title');
     descriptionWrap.classList.add('slide-description');
     playButton.classList.add('play-button');
+    slideInfo.classList.add('slide-info');
 
     slide.style.backgroundImage = "url('http:" + featured[i].image + "')";
     playButton.src = 'assets/play.svg';
 
+    slide.appendChild(playButton);
+    slideInfo.appendChild(titleWrap);
+    slideInfo.appendChild(descriptionWrap);
     titleWrap.appendChild(title);
     descriptionWrap.appendChild(description);
-    slide.appendChild(titleWrap);
-    slide.appendChild(descriptionWrap);
-    slide.appendChild(playButton);
+    slide.appendChild(slideInfo);
     swiperWrapper.appendChild(slide);
 
     const carousel = new Swiper ('.swiper-container', {
       paginationHide: false,
       pagination: '.swiper-pagination',
-      slidesPerView: 2,
+      slidesPerView: 1.5,
       loop: true,
       slidesOffsetBefore: 1,
       centeredSlides: true,
