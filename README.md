@@ -1,5 +1,5 @@
 # JW Streaming Media
-A lightweight page for streaming videos.
+A lightweight page for streaming videos. Check it out [here](https://jwstreaming.herokuapp.com/).
 
 <img src="public/assets/JW streaming.png" alt="screenshot">
 
