@@ -1,7 +1,7 @@
 # JW Streaming Media
 A lightweight page for streaming videos.
 
-![JW screenshot](/public/assets/JW streaming.png)
+<img src="public/assets/JW streaming.png" alt="screenshot">
 
 ## Running locally
 Make sure you have [Node.js](https://nodejs.org/en/) installed, and run:
