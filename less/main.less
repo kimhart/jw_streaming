@@ -11,7 +11,9 @@ body, html {
 }
 
 .page-wrap {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
 }
 
 h1 {
@@ -137,15 +139,15 @@ h1 {
 
 .category-title {
   font-size: 18px;
-  margin-left: 5%;
   margin-top: 50px;
 }
 
 .film {
   box-sizing: border-box;
-  min-width: 20%;
+  cursor: pointer;
+  min-width: 250px;
   height: 100%;
-  margin: 0 10px;
+  margin-right: 10px;
   position: relative;
   overflow: hidden;
   border: 1px solid #484848;
@@ -156,9 +158,10 @@ h1 {
         background-size: cover;
 }
 
+
 .title-bar {
   box-sizing: border-box;
-  background-color: #313131;
+  background-color: #2F2F2F;
   font-size: 14px;
   padding: 10px;
   font-weight: 100;
@@ -168,12 +171,35 @@ h1 {
   width: 100%;
 }
 
-.menu {
+.title-bar.show-description {
+  height: 100%;
+  overflow: scroll;
+  padding: 10px 20px;
+}
+
+.menu-active {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  font-size: 16px;
+  text-align: center;
+  background-color: #000;
+}
+
+.menu, .close {
   height: 25px;
   position: absolute;
   top: 0;
   right: 0;
   padding: 10px;
+}
+
+.close {
+  font-weight: 100;
+  font-size: 26px;
+  margin: 0;
+  padding: 0 10px;
 }
 
 

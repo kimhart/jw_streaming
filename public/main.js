@@ -31,16 +31,20 @@ function populateCategories(films) {
 
 
 function listFilms(list, category) {
+
   for (i = 0; i < list.length; i++) {
 
     const film = document.createElement('div');
     const titleBar = document.createElement('div');
     const title = document.createTextNode(list[i].title);
+    const description = document.createTextNode(list[i].description);
     const menu = document.createElement('img');
+    const menuModal = document.createElement('div');
 
     film.classList.add('film');
     titleBar.classList.add('title-bar');
     menu.classList.add('menu');
+    menuModal.classList.add('menu-active');
 
     film.style.backgroundImage = "url('http:" + list[i].image + "')";
     menu.src = 'assets/menu.svg';
@@ -49,6 +53,33 @@ function listFilms(list, category) {
     film.appendChild(titleBar);
     film.appendChild(menu);
     category.appendChild(film);
+    menuModal.innerHTML = '<p>View Trailer</p><p>Add to Favorites</p><p>Share</p><p class="close">x</p>';
+
+    film.addEventListener('mouseenter', function() {
+      titleBar.classList.add('animate', 'show-description');
+      titleBar.appendChild(description);
+    });
+
+    film.addEventListener('mouseleave', function() {
+      titleBar.classList.remove('show-description');
+      titleBar.removeChild(description);
+    })
+
+    menu.addEventListener('click', function() {
+      film.removeChild(titleBar)
+      film.appendChild(menuModal);
+      menu.style.display = 'none';
+    });
+
+    if (menuModal.classList.contains('menu-active')) {
+      const close = menuModal.querySelector('.close');
+      close.addEventListener('click', function() {
+        film.removeChild(menuModal);
+        film.appendChild(titleBar);
+        menu.style.display = 'block';
+      })
+    }
+ 
   }
 };
 
@@ -95,6 +126,9 @@ function populateCarousel(films) {
     });
   }
 };
+
+
+
 
 
 
