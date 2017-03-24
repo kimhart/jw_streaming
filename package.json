@@ -23,11 +23,11 @@
     "grunt-contrib-less": "^1.4.1",
     "grunt-contrib-watch": "^1.0.0",
     "jit-grunt": "^0.10.0",
+    "less": "^2.7.2",
     "nodemon": "^1.11.0"
   },
   "dependencies": {
     "express": "^4.15.2",
-    "less": "^2.7.2",
     "swiper": "^3.4.2"
   }
 }
