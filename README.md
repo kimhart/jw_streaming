@@ -29,3 +29,4 @@ I prefer running simple node servers with nodemon, a package that watches and re
 * Logic to determine scroll position and highlight left/right arrows appropriately
 * Depending on mobile design, might reconfigure the slideshow to show only 1 "slidePerView" on phone screen.
 * Organize the LESS files for more modularity
+* More reliable cross-browser testing (autoprefixer, etc.)
