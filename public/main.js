@@ -56,7 +56,7 @@ function listFilms(list, category) {
     menuModal.innerHTML = '<p>View Trailer</p><p>Add to Favorites</p><p>Share</p><p class="close">x</p>';
 
     film.addEventListener('mouseenter', function() {
-      titleBar.classList.add('animate', 'show-description');
+      titleBar.classList.add('show-description');
       titleBar.appendChild(description);
     });
 
@@ -74,12 +74,11 @@ function listFilms(list, category) {
     if (menuModal.classList.contains('menu-active')) {
       const close = menuModal.querySelector('.close');
       close.addEventListener('click', function() {
+        menu.style.display = 'block';
         film.removeChild(menuModal);
         film.appendChild(titleBar);
-        menu.style.display = 'block';
       })
     }
- 
   }
 };
 

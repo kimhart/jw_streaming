@@ -22,6 +22,7 @@ h1 {
   text-align: center;
   font-size: 22px;
   letter-spacing: 1.5px;
+  margin: 20px;
 }
 
 .bold-headline {
@@ -158,7 +159,6 @@ h1 {
         background-size: cover;
 }
 
-
 .title-bar {
   box-sizing: border-box;
   background-color: #2F2F2F;
@@ -193,6 +193,7 @@ h1 {
   top: 0;
   right: 0;
   padding: 10px;
+  z-index: 100;
 }
 
 .close {
@@ -201,6 +202,67 @@ h1 {
   margin: 0;
   padding: 0 10px;
 }
+
+@media (max-width: 700px) { 
+  .slide-info {
+    padding: 0;
+    margin-bottom: -20px;
+  }
+}
+
+@media (max-width: 425px) { 
+
+  .carousel, .swiper-container, .arrow-overlay {
+    max-height: 40vh;
+  }
+
+  .play-button {
+    width: 35px;
+  }
+
+  .category {
+    height: 200px;
+  }
+
+  .film {
+    min-width: 100%;
+  }
+
+  .left-arrow, .left-arrow.prev-slide, .right-arrow, .right-arrow.next-slide {
+    height: 20px;
+    padding: 0 30px;
+  }
+
+  .slide-title {
+    font-size: 18px;
+  }
+
+  .slide-description {
+    font-size: 12px;
+  }
+
+}
+
+@media (max-width: 325px) { 
+
+  .slide-title {
+    font-size: 14px;
+  }
+
+  .slide-info {
+    padding: 0;
+    margin-bottom: -30px;
+  }
+
+}
+
+
+
+
+
+
+
+
 
 
 
