@@ -46,7 +46,7 @@ function listFilms(list, category) {
     menu.classList.add('menu');
     menuModal.classList.add('menu-active');
 
-    film.style.backgroundImage = "url('http:" + list[i].image + "')";
+    film.style.backgroundImage = "url(" + list[i].image + ")";
     menu.src = 'assets/menu.svg';
 
     titleBar.appendChild(title);
@@ -100,7 +100,7 @@ function populateCarousel(films) {
     playButton.classList.add('play-button');
     slideInfo.classList.add('slide-info');
 
-    slide.style.backgroundImage = "url('http:" + featured[i].image + "')";
+    slide.style.backgroundImage = "url(" + featured[i].image + ")";
     playButton.src = 'assets/play.svg';
 
     slide.appendChild(playButton);
