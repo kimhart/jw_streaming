@@ -23,7 +23,7 @@
     "nodemon": "^1.11.0"
   },
   "dependencies": {
-    "grunt": "^1.0.1",
+    "grunt": "^1.5.2",
     "jit-grunt": "^0.10.0",
     "express": "^4.15.2",
     "swiper": "^3.4.2"
